@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\piotr\source\repos\GK_Project3D\GK_Project3D\main.cpp(179,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  GK_Project3D.vcxproj -> C:\Users\piotr\source\repos\GK_Project3D\x64\Debug\GK_Project3D.exe
