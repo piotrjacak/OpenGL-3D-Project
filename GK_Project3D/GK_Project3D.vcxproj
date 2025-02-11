@@ -134,21 +134,39 @@
   <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="stb_image.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="gourardShader.fs" />
+    <None Include="gourardShader.vs" />
     <None Include="shader.fs" />
     <None Include="shader.vs" />
+    <None Include="skybox.fs" />
+    <None Include="skybox.vs" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="camera.h" />
     <ClInclude Include="shader.h" />
+    <ClInclude Include="Sphere.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="container.jpg" />
-    <Image Include="normalMap1.jpg" />
-    <Image Include="normalMap2.png" />
+    <Image Include="back.jpg" />
+    <Image Include="bottom.jpg" />
+    <Image Include="container2.png" />
+    <Image Include="container2_specular.png" />
+    <Image Include="front.jpg" />
+    <Image Include="left.jpg" />
+    <Image Include="right.jpg" />
+    <Image Include="textures\brickwall.jpg" />
+    <Image Include="textures\brickwall_normal.jpg" />
+    <Image Include="textures\grass.jpg" />
+    <Image Include="textures\lightTexture.jpg" />
+    <Image Include="top.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="docs.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

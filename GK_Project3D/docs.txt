@@ -1,0 +1,20 @@
+CIENIOWANIE GOURARDA
+
+Aby prze³¹czyæ siê na cieniowanie Gourarda nale¿y wcisn¹æ przycisk "G".
+Aby z powrotem wróciæ do cieniowania Phonga nale¿y wcisn¹æ przycisk "P".
+
+W moim programie cieniowanie Gourarda zrealizowane jest za pomoc¹ nowej pary shaderów.
+W shaderze standardowym (cieniowanie Phonga) obliczanie kolorów zrealizowane jest w Fragment Shaderze, oddzielnie dla ka¿dego piksela.
+W nowym shaderze, kolory obliczane s¹ w Vertex Shaderze i przekazywane s¹ bezpoœrednio do Fragment Shadera, który to z kolei interpoluje odpowiednio otrzymane kolory.
+
+Niestety w mojej implementacji z jakiegoœ powodu nie do koñca dzia³a poprawne wczytywanie tekstur w ten sposób i niestety nie uda³o mi siê zlokalizowaæ b³êdu.
+
+
+NORMAL MAPPING
+
+Aby prze³¹czyæ siê na zestaw tekstur do mapowania wektorów normalnych nale¿y wciœn¹æ przycisk ",". 
+Aby cofn¹æ siê do standardowego zestawu tekstur nale¿y wcisn¹æ przycisk ".".
+
+W moim programie zastosowa³em standardow¹ procedurê u¿ywan¹ do mapowania wektorów normalnych. W Vertex Shaderze oprócz standardowego obliczenia wektora normalnego obliczam te¿ wektory przestrzeni stycznej.
+(tangent space). Przekazujê obliczone wektory do Fragment Shadera, gdzie wykorzystujê je do obliczeñ jednego ze Ÿróde³ œwiat³a (statyczny reflektor). Dziêki nim odpowiednio modyfikujê wektory kierunku reflektora 
+oraz pozycji kamery (obserwatora).

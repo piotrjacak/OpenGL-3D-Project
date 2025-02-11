@@ -13,8 +13,23 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Resource Files\images">
+    <Filter Include="Resource Files\shaders">
+      <UniqueIdentifier>{8f8579b4-0d23-41d1-bf3e-61adcd3dc4ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures">
       <UniqueIdentifier>{6c4dbb74-cd66-4ddb-b24a-8bbf1a1950b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\skyboxes">
+      <UniqueIdentifier>{581e72e8-4c38-45ea-be4f-162d7147b5ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\skyboxes\day">
+      <UniqueIdentifier>{0503aea3-de66-491b-b616-a3ded1325a1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\skyboxes\night">
+      <UniqueIdentifier>{9a985114-97db-4f44-b257-57fa7550306d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\sphere">
+      <UniqueIdentifier>{6420bca3-e859-4055-bd66-1f8e13e6a73a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -27,13 +42,28 @@
     <ClCompile Include="stb_image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>Resource Files\sphere</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="shader.vs">
-      <Filter>Resource Files</Filter>
+    <None Include="skybox.fs">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="gourardShader.fs">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="gourardShader.vs">
+      <Filter>Resource Files\shaders</Filter>
     </None>
     <None Include="shader.fs">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="shader.vs">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="skybox.vs">
+      <Filter>Resource Files\shaders</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -46,16 +76,51 @@
     <ClInclude Include="camera.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>Resource Files\sphere</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="container.jpg">
-      <Filter>Resource Files\images</Filter>
+    <Image Include="container2.png">
+      <Filter>Resource Files\textures</Filter>
     </Image>
-    <Image Include="normalMap1.jpg">
-      <Filter>Resource Files\images</Filter>
+    <Image Include="container2_specular.png">
+      <Filter>Resource Files\textures</Filter>
     </Image>
-    <Image Include="normalMap2.png">
-      <Filter>Resource Files\images</Filter>
+    <Image Include="back.jpg">
+      <Filter>Resource Files\skyboxes\day</Filter>
     </Image>
+    <Image Include="bottom.jpg">
+      <Filter>Resource Files\skyboxes\day</Filter>
+    </Image>
+    <Image Include="front.jpg">
+      <Filter>Resource Files\skyboxes\day</Filter>
+    </Image>
+    <Image Include="left.jpg">
+      <Filter>Resource Files\skyboxes\day</Filter>
+    </Image>
+    <Image Include="right.jpg">
+      <Filter>Resource Files\skyboxes\day</Filter>
+    </Image>
+    <Image Include="top.jpg">
+      <Filter>Resource Files\skyboxes\day</Filter>
+    </Image>
+    <Image Include="textures\lightTexture.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="textures\grass.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="textures\brickwall.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+    <Image Include="textures\brickwall_normal.jpg">
+      <Filter>Resource Files\textures</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="docs.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
