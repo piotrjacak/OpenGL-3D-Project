@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Users\piotr\source\glfw\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\piotr\source\glfw\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\piotr\source\repos\GK_Project3D\GK_Project3D\glfw\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\piotr\source\repos\GK_Project3D\GK_Project3D\glfw\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

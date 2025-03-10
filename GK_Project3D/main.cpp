@@ -19,8 +19,8 @@ unsigned int loadTexture(const char* path);
 unsigned int loadCubemap(std::vector<std::string> faces);
 
 
-const unsigned int SCREEN_WIDTH = 1200;
-const unsigned int SCREEN_HEIGHT = 900;
+const unsigned int SCREEN_WIDTH = 1600;
+const unsigned int SCREEN_HEIGHT = 1200;
 
 
 glm::vec3 mainPosition = glm::vec3(0.0f, 3.0f, 8.0f);
@@ -35,7 +35,7 @@ Camera cameraTPP(offset, glm::vec3(0.0f, 0.0f, 3.0f) - offset);
 Camera* currentCamera = &cameraStatic;
 
 // Light
-glm::vec3 steadyLight = glm::vec3(0.0f, 0.0f, 9.0f);
+glm::vec3 steadyLight = glm::vec3(0.0f, 3.0f, 7.0f);
 float spotLightMovingAngle = 0.0f;
 
 // SkyBox
@@ -189,6 +189,7 @@ int main()
 	};
 
 	// FLOOR
+
 	unsigned int floorVAO, floorVBO, floorEBO;
 	glGenVertexArrays(1, &floorVAO);
 	glGenBuffers(1, &floorVBO);
@@ -198,7 +199,7 @@ int main()
 	glBufferData(GL_ARRAY_BUFFER, sizeof(floorVertices), floorVertices, GL_STATIC_DRAW);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, floorEBO);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(floorIndices), floorIndices, GL_STATIC_DRAW);
-	// position attribute
+
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
@@ -307,7 +308,7 @@ int main()
 
 		// Set up steady spotlight
 		currentShader->setVec3("spotLight.position", view * glm::vec4(steadyLight, 1.0f));
-		currentShader->setVec3("spotLight.direction", glm::normalize(glm::mat3(view) * glm::vec3(0.0f, 0.0f, -7.0f)));
+		currentShader->setVec3("spotLight.direction", glm::normalize(glm::mat3(view) * glm::vec3(0.0f, -3.0f, -7.0f)));
 		currentShader->setVec3("spotLight.ambient", 0.0f, 0.0f, 0.0f);
 		currentShader->setVec3("spotLight.diffuse", 1.0f, 1.0f, 1.0f);
 		currentShader->setVec3("spotLight.specular", 1.0f, 1.0f, 1.0f);
@@ -351,6 +352,7 @@ int main()
 		// Draw moving object
 		glBindVertexArray(cubeVAO);
 		glm::mat4 modelFirst = glm::mat4(1.0f);
+	
 		modelFirst = glm::translate(modelFirst, translation);
 		modelFirst = glm::rotate(modelFirst, (float)glfwGetTime() * glm::radians(50.0f), glm::vec3(0.0f, 1.0f, 0.0f));
 		currentShader->setMat4("model", modelFirst);
